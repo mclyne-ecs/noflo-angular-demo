@@ -10,12 +10,22 @@
     "outports": {},
     "groups": [],
     "processes": {
-        "core/Output_5bxmn": {
+        "angular-demo/testComponent_k4huk": {
+            "component": "angular-demo/testComponent",
+            "metadata": {
+                "label": "testComponent",
+                "x": 468,
+                "y": 432,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/Output_6jg1d": {
             "component": "core/Output",
             "metadata": {
                 "label": "Output",
-                "x": 540,
-                "y": 396,
+                "x": 612,
+                "y": 432,
                 "width": 72,
                 "height": 72
             }
@@ -23,9 +33,20 @@
     },
     "connections": [
         {
-            "data": "hello world!",
+            "src": {
+                "process": "angular-demo/testComponent_k4huk",
+                "port": "out"
+            },
             "tgt": {
-                "process": "core/Output_5bxmn",
+                "process": "core/Output_6jg1d",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "data": "hello world",
+            "tgt": {
+                "process": "angular-demo/testComponent_k4huk",
                 "port": "in"
             }
         }
