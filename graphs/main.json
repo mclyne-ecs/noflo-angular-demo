@@ -10,7 +10,7 @@
     "outports": {},
     "groups": [],
     "processes": {
-        "angular-demo/testComponent_1": {
+        "angular-demo/testComponent": {
             "component": "angular-demo/testComponent",
             "metadata": {
                 "label": "testComponent",
@@ -19,16 +19,6 @@
                 "width": 72,
                 "height": 72
             }
-        },
-        "angular-demo/testComponent_2": {
-          "component": "angular-demo/testComponent",
-          "metadata": {
-            "label": "testComponent",
-            "x": 368,
-            "y": 432,
-            "width": 72,
-            "height": 72
-          }
         },
         "core/Output": {
             "component": "core/Output",
@@ -44,7 +34,7 @@
     "connections": [
         {
             "src": {
-                "process": "angular-demo/testComponent1",
+                "process": "angular-demo/testComponent",
                 "port": "out"
             },
             "tgt": {
