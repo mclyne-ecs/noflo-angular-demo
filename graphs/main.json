@@ -42,13 +42,6 @@
                 "port": "in"
             },
             "metadata": {}
-        },
-        {
-            "data": "hello world",
-            "tgt": {
-                "process": "angular-demo/testComponent_k4huk",
-                "port": "in"
-            }
         }
     ]
 }
