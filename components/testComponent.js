@@ -8,7 +8,7 @@ exports.getComponent = () => {
 
   c.inPorts.add(
     'in',
-    { datatype: 'String'}
+    { datatype: 'all'}
   );
   c.outPorts.add(
     'out',
