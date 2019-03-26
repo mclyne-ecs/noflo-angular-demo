@@ -27,7 +27,7 @@ exports.getComponent = () => {
 
     const inputLength = input.getData('in');
     output.send({
-      out: inputLength.length
+      out: 'logging output: ' + inputLength.length
     });
     output.done();
   });

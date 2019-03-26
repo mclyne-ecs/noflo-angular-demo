@@ -4,7 +4,7 @@ exports.getComponent = () => {
   const c = new noflo.Component();
   c.inPorts.add('start', { datatype: 'bang'});
   c.inPorts.add('stop', { datatype: 'bang'});
-  c.inPorts.add('out', { datatype: 'all'});
+  c.inPorts.add('out', { datatype: 'bang'});
 
   c.autoOrdering = false;
 
