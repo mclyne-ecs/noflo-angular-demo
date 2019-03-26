@@ -1,11 +1,10 @@
 const noflo = require('noflo');
-const fs = require('fs');
 
 exports.getComponent = () => {
   const c = new noflo.Component();
 
   c.description = 'check input length';
-  c.icon = 'file';
+  c.icon = 'cog';
 
   c.inPorts.add(
     'in',
@@ -33,4 +32,4 @@ exports.getComponent = () => {
     output.done();
   });
   return c;
-}
+};
