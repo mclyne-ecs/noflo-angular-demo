@@ -14,7 +14,7 @@
             "component": "angular-demo/testComponent",
             "metadata": {
                 "label": "testComponent",
-                "x": 468,
+                "x": 252,
                 "y": 432,
                 "width": 72,
                 "height": 72
@@ -24,8 +24,18 @@
             "component": "core/Output",
             "metadata": {
                 "label": "Output",
-                "x": 612,
+                "x": 684,
                 "y": 432,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "angular-demo/lengthComponent_y8qm2": {
+            "component": "angular-demo/lengthComponent",
+            "metadata": {
+                "label": "lengthComponent",
+                "x": 468,
+                "y": 288,
                 "width": 72,
                 "height": 72
             }
@@ -38,9 +48,23 @@
                 "port": "out"
             },
             "tgt": {
+                "process": "angular-demo/lengthComponent_y8qm2",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "angular-demo/lengthComponent_y8qm2",
+                "port": "out"
+            },
+            "tgt": {
                 "process": "core/Output",
                 "port": "in"
-            }
+            },
+            "metadata": {}
         },
         {
             "data": "hello world",
