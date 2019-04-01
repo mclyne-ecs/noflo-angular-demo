@@ -18,7 +18,18 @@
             }
         }
     },
-    "outports": {},
+    "outports": {
+      "out": {
+        "process": "cstrings/SendString_s9isj",
+        "port": "out",
+        "metadata": {
+          "x": 540,
+          "y": 144,
+          "width": 72,
+          "height": 72
+        }
+      }
+    },
     "groups": [],
     "processes": {
         "angular-demo/testComponent": {
