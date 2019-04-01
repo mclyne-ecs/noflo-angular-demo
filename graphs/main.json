@@ -20,7 +20,7 @@
     },
     "outports": {
       "out": {
-        "process": "strings/SendString_s9isj",
+        "process": "angular-demo/lengthComponent_y8qm2",
         "port": "out",
         "metadata": {
           "x": 540,
@@ -61,16 +61,6 @@
                 "width": 72,
                 "height": 72
             }
-        },
-        "strings/SendString_s9isj": {
-            "component": "strings/SendString",
-            "metadata": {
-                "label": "SendString",
-                "x": 648,
-                "y": 432,
-                "width": 72,
-                "height": 72
-            }
         }
     },
     "connections": [
@@ -96,17 +86,6 @@
                 "process": "angular-demo/testComponent",
                 "port": "in"
             }
-        },
-        {
-            "src": {
-                "process": "angular-demo/lengthComponent_y8qm2",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "strings/SendString_s9isj",
-                "port": "in"
-            },
-            "metadata": {}
         }
     ]
 }
