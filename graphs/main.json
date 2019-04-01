@@ -7,29 +7,18 @@
         }
     },
     "inports": {
-      "in": {
-        "process": "Start",
-        "port": "in",
-        "metadata": {
-          "x": -180,
-          "y": 72,
-          "width": 72,
-          "height": 72
+        "in": {
+            "process": "Start",
+            "port": "in",
+            "metadata": {
+                "x": -108,
+                "y": 432,
+                "width": 72,
+                "height": 72
+            }
         }
-      }
     },
-    "outports": {
-      "out": {
-        "process": "core/Output",
-        "port": "out",
-        "metadata": {
-          "x": 540,
-          "y": 144,
-          "width": 72,
-          "height": 72
-        }
-      }
-    },
+    "outports": {},
     "groups": [],
     "processes": {
         "angular-demo/testComponent": {
@@ -37,16 +26,6 @@
             "metadata": {
                 "label": "testComponent",
                 "x": 252,
-                "y": 432,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "core/Output": {
-            "component": "core/Output",
-            "metadata": {
-                "label": "Output",
-                "x": 684,
                 "y": 432,
                 "width": 72,
                 "height": 72
@@ -71,6 +50,16 @@
                 "width": 72,
                 "height": 72
             }
+        },
+        "strings/SendString_s9isj": {
+            "component": "strings/SendString",
+            "metadata": {
+                "label": "SendString",
+                "x": 648,
+                "y": 432,
+                "width": 72,
+                "height": 72
+            }
         }
     },
     "connections": [
@@ -89,22 +78,21 @@
         },
         {
             "src": {
-                "process": "angular-demo/lengthComponent_y8qm2",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "core/Output",
-                "port": "in"
-            },
-            "metadata": {}
-        },
-        {
-            "src": {
                 "process": "Start",
                 "port": "out"
             },
             "tgt": {
                 "process": "angular-demo/testComponent",
+                "port": "in"
+            }
+        },
+        {
+            "src": {
+                "process": "angular-demo/lengthComponent_y8qm2",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "strings/SendString_s9isj",
                 "port": "in"
             },
             "metadata": {}
