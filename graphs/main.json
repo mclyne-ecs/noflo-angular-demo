@@ -20,7 +20,7 @@
     },
     "outports": {
       "out": {
-        "process": "cstrings/SendString_s9isj",
+        "process": "strings/SendString_s9isj",
         "port": "out",
         "metadata": {
           "x": 540,
