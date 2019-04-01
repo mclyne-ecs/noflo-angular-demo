@@ -39,6 +39,16 @@
                 "width": 72,
                 "height": 72
             }
+        },
+        "Start": {
+            "component": "core/Repeat",
+            "metadata": {
+                "label": "Start",
+                "x": 72,
+                "y": 432,
+                "width": 72,
+                "height": 72
+            }
         }
     },
     "connections": [
@@ -67,11 +77,15 @@
             "metadata": {}
         },
         {
-            "data": "hello world",
+            "src": {
+                "process": "Start",
+                "port": "out"
+            },
             "tgt": {
                 "process": "angular-demo/testComponent",
                 "port": "in"
-            }
+            },
+            "metadata": {}
         }
     ]
 }
