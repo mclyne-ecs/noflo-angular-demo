@@ -6,8 +6,30 @@
             "type": "noflo-nodejs"
         }
     },
-    "inports": {},
-    "outports": {},
+    "inports": {
+      "in": {
+        "process": "Start",
+        "port": "in",
+        "metadata": {
+          "x": -180,
+          "y": 72,
+          "width": 72,
+          "height": 72
+        }
+      }
+    },
+    "outports": {
+      "out": {
+        "process": "core/Output",
+        "port": "out",
+        "metadata": {
+          "x": 540,
+          "y": 144,
+          "width": 72,
+          "height": 72
+        }
+      }
+    },
     "groups": [],
     "processes": {
         "angular-demo/testComponent": {
