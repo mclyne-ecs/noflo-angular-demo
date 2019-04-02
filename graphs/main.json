@@ -18,38 +18,7 @@
             }
         }
     },
-    "outports": {
-        "page_a": {
-            "process": "angular-demo/pageAComponent_blpuq",
-            "port": "out",
-            "metadata": {
-                "x": 864,
-                "y": 288,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "page_b": {
-            "process": "angular-demo/pageBComponent_r0gtg",
-            "port": "out",
-            "metadata": {
-                "x": 864,
-                "y": 432,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "page_c": {
-            "process": "angular-demo/pageCComponent_54hdl",
-            "port": "out",
-            "metadata": {
-                "x": 864,
-                "y": 576,
-                "width": 72,
-                "height": 72
-            }
-        }
-    },
+    "outports": {},
     "groups": [],
     "processes": {
         "angular-demo/testComponent": {
@@ -111,6 +80,16 @@
                 "width": 72,
                 "height": 72
             }
+        },
+        "strings/ToString_bywu0": {
+            "component": "strings/ToString",
+            "metadata": {
+                "label": "ToString",
+                "x": 864,
+                "y": 432,
+                "width": 72,
+                "height": 72
+            }
         }
     },
     "connections": [
@@ -164,6 +143,52 @@
             },
             "tgt": {
                 "process": "angular-demo/pageCComponent_54hdl",
+                "port": "in"
+            }
+        },
+        {
+            "src": {
+                "process": "angular-demo/pageAComponent_blpuq",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "strings/ToString_bywu0",
+                "port": "in"
+            },
+            "metadata": {
+                "route": null
+            }
+        },
+        {
+            "src": {
+                "process": "angular-demo/pageBComponent_r0gtg",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "strings/ToString_bywu0",
+                "port": "in"
+            },
+            "metadata": {
+                "route": null
+            }
+        },
+        {
+            "src": {
+                "process": "angular-demo/pageCComponent_54hdl",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "strings/ToString_bywu0",
+                "port": "in"
+            },
+            "metadata": {
+                "route": null
+            }
+        },
+        {
+            "data": "hello",
+            "tgt": {
+                "process": "Start",
                 "port": "in"
             }
         }
