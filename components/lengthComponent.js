@@ -11,11 +11,11 @@ exports.getComponent = () => {
     { datatype: 'int'}
   );
   c.outPorts.add(
-    'lessThan',
+    'lessthan',
     { datatype: 'string'}
   );
   c.outPorts.add(
-    'greaterThan',
+    'greaterthan',
     { datatype: 'string'}
   );
   c.outPorts.add(
@@ -38,11 +38,11 @@ exports.getComponent = () => {
     // Check if the input string is greater than 5 characters
     if (inputStringLength < 5) {
       output.send({
-        lessThan: 'I am less than 5!'
+        lessthan: 'I am less than 5!'
       });
     } else if (inputStringLength > 5) {
       output.send({
-        greaterThan: 'I am greater than 5!'
+        greaterthan: 'I am greater than 5!'
       });
     } else {
       output.send({
