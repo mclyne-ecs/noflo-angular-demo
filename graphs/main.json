@@ -166,13 +166,6 @@
                 "process": "angular-demo/pageCComponent_54hdl",
                 "port": "in"
             }
-        },
-        {
-            "data": "helloth",
-            "tgt": {
-                "process": "Start",
-                "port": "in"
-            }
         }
     ]
 }
