@@ -38,7 +38,17 @@
                 "width": 72,
                 "height": 72
             }
-        }
+        },
+        "page_c": {
+          "process": "angular-demo/pageCComponent_54hdl",
+          "port": "equal",
+          "metadata": {
+              "x": 540,
+              "y": 144,
+              "width": 72,
+              "height": 72
+          }
+      }
     },
     "groups": [],
     "processes": {
