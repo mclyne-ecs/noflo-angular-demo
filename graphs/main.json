@@ -23,8 +23,8 @@
             "process": "angular-demo/pageAComponent_blpuq",
             "port": "out",
             "metadata": {
-                "x": 540,
-                "y": 144,
+                "x": 864,
+                "y": 288,
                 "width": 72,
                 "height": 72
             }
@@ -33,22 +33,22 @@
             "process": "angular-demo/pageBComponent_r0gtg",
             "port": "out",
             "metadata": {
-                "x": 540,
-                "y": 144,
+                "x": 864,
+                "y": 432,
                 "width": 72,
                 "height": 72
             }
         },
         "page_c": {
-          "process": "angular-demo/pageCComponent_54hdl",
-          "port": "out",
-          "metadata": {
-              "x": 540,
-              "y": 144,
-              "width": 72,
-              "height": 72
-          }
-      }
+            "process": "angular-demo/pageCComponent_54hdl",
+            "port": "out",
+            "metadata": {
+                "x": 864,
+                "y": 576,
+                "width": 72,
+                "height": 72
+            }
+        }
     },
     "groups": [],
     "processes": {
