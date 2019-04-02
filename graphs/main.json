@@ -21,7 +21,7 @@
     "outports": {
         "page_a": {
             "process": "angular-demo/pageAComponent_blpuq",
-            "port": "lessthan",
+            "port": "out",
             "metadata": {
                 "x": 540,
                 "y": 144,
@@ -31,7 +31,7 @@
         },
         "page_b": {
             "process": "angular-demo/pageBComponent_r0gtg",
-            "port": "greaterthan",
+            "port": "out",
             "metadata": {
                 "x": 540,
                 "y": 144,
@@ -41,7 +41,7 @@
         },
         "page_c": {
           "process": "angular-demo/pageCComponent_54hdl",
-          "port": "equal",
+          "port": "out",
           "metadata": {
               "x": 540,
               "y": 144,
