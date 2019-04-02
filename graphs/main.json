@@ -19,36 +19,26 @@
         }
     },
     "outports": {
-      "page_a": {
-        "process": "angular-demo/pageAComponent_blpuq",
-        "port": "lessthan",
-        "metadata": {
-          "x": 540,
-          "y": 144,
-          "width": 72,
-          "height": 72
+        "page_a": {
+            "process": "angular-demo/pageAComponent_blpuq",
+            "port": "lessthan",
+            "metadata": {
+                "x": 540,
+                "y": 144,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "page_b": {
+            "process": "angular-demo/pageBComponent_r0gtg",
+            "port": "greaterthan",
+            "metadata": {
+                "x": 540,
+                "y": 144,
+                "width": 72,
+                "height": 72
+            }
         }
-      },
-      "page_b": {
-        "process": "angular-demo/pageBComponent_r0gtg",
-        "port": "greaterthan",
-        "metadata": {
-          "x": 540,
-          "y": 144,
-          "width": 72,
-          "height": 72
-        }
-      },
-      "page_c": {
-        "process": "angular-demo/pageCComponent",
-        "port": "equal",
-        "metadata": {
-          "x": 540,
-          "y": 144,
-          "width": 72,
-          "height": 72
-        }
-      }
     },
     "groups": [],
     "processes": {
@@ -111,16 +101,6 @@
                 "width": 72,
                 "height": 72
             }
-        },
-        "core/Output_sjy28": {
-            "component": "core/Output",
-            "metadata": {
-                "label": "Output",
-                "x": 936,
-                "y": 432,
-                "width": 72,
-                "height": 72
-            }
         }
     },
     "connections": [
@@ -155,8 +135,7 @@
             "tgt": {
                 "process": "angular-demo/pageAComponent_blpuq",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -166,8 +145,7 @@
             "tgt": {
                 "process": "angular-demo/pageBComponent_r0gtg",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -177,41 +155,7 @@
             "tgt": {
                 "process": "angular-demo/pageCComponent_54hdl",
                 "port": "in"
-            },
-            "metadata": {}
-        },
-        {
-            "src": {
-                "process": "angular-demo/pageAComponent_blpuq",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "core/Output_sjy28",
-                "port": "in"
-            },
-            "metadata": {}
-        },
-        {
-            "src": {
-                "process": "angular-demo/pageBComponent_r0gtg",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "core/Output_sjy28",
-                "port": "in"
-            },
-            "metadata": {}
-        },
-        {
-            "src": {
-                "process": "angular-demo/pageCComponent_54hdl",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "core/Output_sjy28",
-                "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "data": "helloth",
