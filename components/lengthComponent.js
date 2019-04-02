@@ -11,7 +11,15 @@ exports.getComponent = () => {
     { datatype: 'int'}
   );
   c.outPorts.add(
-    'out',
+    'lessThan',
+    { datatype: 'string'}
+  );
+  c.outPorts.add(
+    'greaterThan',
+    { datatype: 'string'}
+  );
+  c.outPorts.add(
+    'equal',
     { datatype: 'string'}
   );
   c.outPorts.add(
@@ -26,16 +34,24 @@ exports.getComponent = () => {
     }
 
     const inputStringLength = input.getData('in');
-    let result = '';
+    console.log(inputStringLength)
     // Check if the input string is greater than 5 characters
-    if (inputStringLength > 5) {
-      result = 'Success';
+    if (inputStringLength < 5) {
+      output.send({
+        lessThan: 'I am less than 5!'
+      });
+    } else if (inputStringLength > 5) {
+      output.send({
+        greaterThan: 'I am greater than 5!'
+      });
     } else {
-      result = 'Failure';
+      output.send({
+        equal: 'I am equal to 5!'
+      });
     }
-    output.send({
+    /*output.send({
       out: result
-    });
+    });*/
     output.done();
   });
   return c;
