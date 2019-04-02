@@ -183,7 +183,7 @@
             "metadata": {}
         },
         {
-            "data": "hello",
+            "data": "helloth",
             "tgt": {
                 "process": "Start",
                 "port": "in"
