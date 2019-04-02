@@ -7,28 +7,28 @@
         }
     },
     "inports": {
-      "in": {
-          "process": "Start",
-          "port": "in",
-          "metadata": {
-              "x": -108,
-              "y": 432,
-              "width": 72,
-              "height": 72
-          }
-      }
+        "in": {
+            "process": "Start",
+            "port": "in",
+            "metadata": {
+                "x": -108,
+                "y": 432,
+                "width": 72,
+                "height": 72
+            }
+        }
     },
     "outports": {
-      "pageoutput": {
-        "process": "strings/ToString_bywu0",
-        "port": "out",
-        "metadata": {
-            "x": 864,
-            "y": 432,
-            "width": 72,
-            "height": 72
+        "pageoutput": {
+            "process": "strings/ToString_bywu0",
+            "port": "out",
+            "metadata": {
+                "x": 1008,
+                "y": 432,
+                "width": 72,
+                "height": 72
+            }
         }
-      }
     },
     "groups": [],
     "processes": {
@@ -194,13 +194,6 @@
             },
             "metadata": {
                 "route": null
-            }
-        },
-        {
-            "data": "hello",
-            "tgt": {
-                "process": "Start",
-                "port": "in"
             }
         }
     ]
