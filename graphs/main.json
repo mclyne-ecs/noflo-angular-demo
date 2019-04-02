@@ -18,7 +18,38 @@
             }
         }
     },
-    "outports": {},
+    "outports": {
+      "page_a": {
+        "process": "angular-demo/pageAComponent_blpuq",
+        "port": "greaterthan",
+        "metadata": {
+          "x": 540,
+          "y": 144,
+          "width": 72,
+          "height": 72
+        }
+      },
+      "page_b": {
+        "process": "angular-demo/pageBComponent_r0gtg",
+        "port": "greaterthan",
+        "metadata": {
+          "x": 540,
+          "y": 144,
+          "width": 72,
+          "height": 72
+        }
+      },
+      "page_c": {
+        "process": "angular-demo/pageCComponent",
+        "port": "greaterthan",
+        "metadata": {
+          "x": 540,
+          "y": 144,
+          "width": 72,
+          "height": 72
+        }
+      }
+    },
     "groups": [],
     "processes": {
         "angular-demo/testComponent": {
