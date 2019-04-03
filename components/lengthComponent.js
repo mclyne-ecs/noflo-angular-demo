@@ -34,7 +34,7 @@ exports.getComponent = () => {
     }
 
     const inputStringLength = input.getData('in');
-    console.log(inputStringLength)
+    console.log('Input string length: ' + inputStringLength)
     console.log(typeof inputStringLength)
     // Check if the input string is greater than 5 characters
     if (inputStringLength < 5) {

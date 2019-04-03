@@ -12,7 +12,7 @@ exports.getComponent = () => {
   );
   c.outPorts.add(
     'out',
-    { datatype: 'string'}
+    { datatype: 'int'}
   );
   c.outPorts.add(
       'error',
@@ -25,14 +25,15 @@ exports.getComponent = () => {
       return
     }
 
-    const inputString = input.getData('in');
+    const testComponentOutput = input.getData('in');
+    console.log('From the process component, the testComponent output: ' + testComponentOutput);
     setTimeout(() => {
       console.log('Calling some service');
       output.send({
-        out: inputString.length
+        out: testComponentOutput
       });
+      output.done();
     }, 3000);
-    output.done();
   });
   return c;
 };
