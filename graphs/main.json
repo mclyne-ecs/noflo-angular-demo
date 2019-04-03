@@ -11,7 +11,7 @@
             "process": "Start",
             "port": "in",
             "metadata": {
-                "x": -144,
+                "x": -288,
                 "y": 432,
                 "width": 72,
                 "height": 72
@@ -36,7 +36,7 @@
             "component": "angular-demo/testComponent",
             "metadata": {
                 "label": "testComponent",
-                "x": 108,
+                "x": 0,
                 "y": 432,
                 "width": 72,
                 "height": 72
@@ -46,7 +46,7 @@
             "component": "angular-demo/lengthComponent",
             "metadata": {
                 "label": "lengthComponent",
-                "x": 468,
+                "x": 432,
                 "y": 432,
                 "width": 72,
                 "height": 72
@@ -56,7 +56,7 @@
             "component": "core/Repeat",
             "metadata": {
                 "label": "Start",
-                "x": -36,
+                "x": -144,
                 "y": 432,
                 "width": 72,
                 "height": 72
@@ -106,8 +106,18 @@
             "component": "angular-demo/processComponent",
             "metadata": {
                 "label": "processComponent",
-                "x": 288,
+                "x": 144,
                 "y": 432,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "angular-demo/secondaryComponent_shbls": {
+            "component": "angular-demo/secondaryComponent",
+            "metadata": {
+                "label": "secondaryComponent",
+                "x": 288,
+                "y": 288,
                 "width": 72,
                 "height": 72
             }
@@ -216,6 +226,37 @@
                 "port": "in"
             },
             "metadata": {}
+        },
+        {
+            "src": {
+                "process": "angular-demo/processComponent_wj807",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "angular-demo/secondaryComponent_shbls",
+                "port": "testcomp_in"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "angular-demo/secondaryComponent_shbls",
+                "port": "success"
+            },
+            "tgt": {
+                "process": "angular-demo/lengthComponent_y8qm2",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "data": "hello world",
+            "tgt": {
+                "process": "Start",
+                "port": "in"
+            }
         }
     ]
 }
