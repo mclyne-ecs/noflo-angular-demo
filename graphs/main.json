@@ -264,13 +264,6 @@
             "metadata": {
                 "route": 1
             }
-        },
-        {
-            "data": "hi",
-            "tgt": {
-                "process": "Start",
-                "port": "in"
-            }
         }
     ]
 }
