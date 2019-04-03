@@ -28,12 +28,17 @@ exports.getComponent = () => {
   );
 
   c.process((input, output) => {
-    // If there is no data then return
+    // If there is no data from the primary login, then return
     if(!input.hasData('testcomp_in')) {
-      return
+      return;
     }
 
-    const secondaryCheck = input.getData('in');
+    let secondaryCheck;
+    if(!input.hasData('in')) {
+      secondaryCheck = false;
+    }
+
+    secondaryCheck = input.getData('in');
     const testComponentValue = input.getData('testcomp_in');
     console.log('Secondary Check: ' + secondaryCheck);
     console.log('Test component Value: ' + testComponentValue);
