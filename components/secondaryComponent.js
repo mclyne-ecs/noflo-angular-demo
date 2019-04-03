@@ -7,7 +7,7 @@ exports.getComponent = () => {
   c.icon = 'cog';
 
   c.inPorts.add(
-    'in',
+    'secondary_in',
     { datatype: 'boolean'}
   );
   c.inPorts.add(
@@ -29,7 +29,7 @@ exports.getComponent = () => {
 
   c.process((input, output) => {
     // If there is no data from the primary login, then return
-    if(!input.hasData('testcomp_in') && !input.hasData('in')) {
+    if(!input.hasData('in', 'testcomp_in')) {
       return;
     }
 
