@@ -18,14 +18,14 @@
             }
         },
         "secondary_in": {
-          "process": "angular-demo/secondaryComponent_shbls",
-          "port": "in",
-          "metadata": {
-            "x": -288,
-            "y": 288,
-            "width": 72,
-            "height": 72
-          }
+            "process": "angular-demo/secondaryComponent_shbls",
+            "port": "in",
+            "metadata": {
+                "x": -288,
+                "y": 288,
+                "width": 72,
+                "height": 72
+            }
         }
     },
     "outports": {
@@ -107,7 +107,7 @@
             "metadata": {
                 "label": "ToString",
                 "x": 864,
-                "y": 432,
+                "y": 468,
                 "width": 72,
                 "height": 72
             }
@@ -184,7 +184,7 @@
                 "port": "in"
             },
             "metadata": {
-                "route": null
+                "route": 4
             }
         },
         {
@@ -197,7 +197,7 @@
                 "port": "in"
             },
             "metadata": {
-                "route": null
+                "route": 4
             }
         },
         {
@@ -210,7 +210,7 @@
                 "port": "in"
             },
             "metadata": {
-                "route": null
+                "route": 4
             }
         },
         {
@@ -234,8 +234,7 @@
             "tgt": {
                 "process": "angular-demo/lengthComponent_y8qm2",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -247,7 +246,7 @@
                 "port": "testcomp_in"
             },
             "metadata": {
-                "route": 0
+                "route": 7
             }
         },
         {
@@ -259,7 +258,22 @@
                 "process": "angular-demo/lengthComponent_y8qm2",
                 "port": "in"
             },
-            "metadata": {}
+            "metadata": {
+                "route": 7
+            }
+        },
+        {
+            "src": {
+                "process": "angular-demo/secondaryComponent_shbls",
+                "port": "failure"
+            },
+            "tgt": {
+                "process": "strings/ToString_bywu0",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 1
+            }
         },
         {
             "data": "hello world",
