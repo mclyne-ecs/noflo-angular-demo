@@ -232,16 +232,6 @@
                 "port": "out"
             },
             "tgt": {
-                "process": "angular-demo/lengthComponent_y8qm2",
-                "port": "in"
-            }
-        },
-        {
-            "src": {
-                "process": "angular-demo/processComponent_wj807",
-                "port": "out"
-            },
-            "tgt": {
                 "process": "angular-demo/secondaryComponent_shbls",
                 "port": "testcomp_in"
             },
