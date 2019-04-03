@@ -35,6 +35,8 @@ exports.getComponent = () => {
 
     const secondaryCheck = input.getData('in');
     const testComponentValue = input.getData('testcomp_in');
+    console.log('Secondary Check: ' + secondaryCheck);
+    console.log('Test component Value: ' + testComponentValue);
     // Only send the value forward if some logical conditon is met
     if (secondaryCheck) {
       output.send({
