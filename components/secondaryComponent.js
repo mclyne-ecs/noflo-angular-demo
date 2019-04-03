@@ -29,26 +29,20 @@ exports.getComponent = () => {
 
   c.process((input, output) => {
     // If there is no data from the primary login, then return
-    if(!input.hasData('testcomp_in')) {
+    if(!input.hasData('testcomp_in') && !input.hasData('in')) {
       return;
     }
 
-    let secondaryCheck;
-    if(!input.hasData('in')) {
-      secondaryCheck = false;
-    } else {
-      secondaryCheck = input.getData('in');
-    }
+    const secondaryLogin = input.getData('in');
     const testComponentValue = input.getData('testcomp_in');
-    console.log('Secondary Check: ' + secondaryCheck);
+    console.log('Secondary Login: ' + secondaryLogin);
     console.log('Test component Value: ' + testComponentValue);
-    // Only send the value forward if some logical conditon is met
-    if (secondaryCheck) {
+
+    if (secondaryLogin === 'yes') {
       output.send({
         success: testComponentValue
       });
     } else {
-      console.log('Should be sending failure to ToString');
       output.send({
         failure: 'Failure'
       });
