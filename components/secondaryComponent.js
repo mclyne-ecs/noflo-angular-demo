@@ -29,7 +29,7 @@ exports.getComponent = () => {
 
   c.process((input, output) => {
     // If there is no data then return
-    if(!input.hasData('in')) {
+    if(!input.hasData('testcomp_in')) {
       return
     }
 
