@@ -48,6 +48,7 @@ exports.getComponent = () => {
         success: testComponentValue
       });
     } else {
+      console.log('Should be sending failure to ToString');
       output.send({
         failure: 'Failure'
       });
