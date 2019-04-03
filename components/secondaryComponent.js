@@ -36,9 +36,9 @@ exports.getComponent = () => {
     let secondaryCheck;
     if(!input.hasData('in')) {
       secondaryCheck = false;
+    } else {
+      secondaryCheck = input.getData('in');
     }
-
-    secondaryCheck = input.getData('in');
     const testComponentValue = input.getData('testcomp_in');
     console.log('Secondary Check: ' + secondaryCheck);
     console.log('Test component Value: ' + testComponentValue);
