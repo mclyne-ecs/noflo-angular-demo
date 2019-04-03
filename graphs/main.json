@@ -19,7 +19,7 @@
         },
         "secondary_in": {
             "process": "angular-demo/secondaryComponent_shbls",
-            "port": "in",
+            "port": "secondary_in",
             "metadata": {
                 "x": -288,
                 "y": 288,
