@@ -40,11 +40,11 @@ exports.getComponent = () => {
     // Only send the value forward if some logical conditon is met
     if (secondaryCheck) {
       output.send({
-        out: testComponentValue
+        success: testComponentValue
       });
     } else {
       output.send({
-        out: 'Failure'
+        failure: 'Failure'
       });
     }
     output.done();
