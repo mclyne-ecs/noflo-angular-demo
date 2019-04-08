@@ -18,7 +18,17 @@
                 "width": 72,
                 "height": 72
             }
-        }
+        },
+        "secondaryIn": {
+          "process": "angular-demo/demoSecondary_315an",
+          "port": "in",
+          "metadata": {
+              "x": 72,
+              "y": 62,
+              "width": 72,
+              "height": 72
+          }
+      }
     },
     "outports": {
         "out": {
