@@ -10,27 +10,27 @@
     },
     "inports": {
         "in": {
-          "process": "Start",
-          "port": "in",
-          "metadata": {
-              "x": -288,
-              "y": 432,
-              "width": 72,
-              "height": 72
-          }
-      }
+            "process": "Start",
+            "port": "in",
+            "metadata": {
+                "x": 216,
+                "y": 72,
+                "width": 72,
+                "height": 72
+            }
+        }
     },
     "outports": {
         "out": {
-          "process": "strings/ToString_z6lrx",
-          "port": "out",
-          "metadata": {
-              "x": 1008,
-              "y": 432,
-              "width": 72,
-              "height": 72
-          }
-      }
+            "process": "strings/ToString_z6lrx",
+            "port": "out",
+            "metadata": {
+                "x": 792,
+                "y": 72,
+                "width": 72,
+                "height": 72
+            }
+        }
     },
     "groups": [],
     "processes": {
@@ -87,8 +87,7 @@
             "tgt": {
                 "process": "strings/ToString_z6lrx",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         }
     ]
 }
