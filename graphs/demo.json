@@ -27,7 +27,7 @@
             "metadata": {
                 "label": "demoSecondary",
                 "x": 648,
-                "y": 0,
+                "y": -72,
                 "width": 72,
                 "height": 72
             }
@@ -46,8 +46,8 @@
             "component": "strings/ToString",
             "metadata": {
                 "label": "ToString",
-                "x": 648,
-                "y": 144,
+                "x": 864,
+                "y": 72,
                 "width": 72,
                 "height": 72
             }
@@ -83,6 +83,17 @@
             },
             "tgt": {
                 "process": "angular-demo/outputCheckComponent_naxqs",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "angular-demo/demoSecondary_315an",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "strings/ToString_zvpnt",
                 "port": "in"
             },
             "metadata": {}
