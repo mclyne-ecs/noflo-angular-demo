@@ -20,18 +20,7 @@
             }
         }
     },
-    "outports": {
-        "out": {
-            "process": "strings/ToString_z6lrx",
-            "port": "out",
-            "metadata": {
-                "x": 792,
-                "y": 72,
-                "width": 72,
-                "height": 72
-            }
-        }
-    },
+    "outports": {},
     "groups": [],
     "processes": {
         "Start": {
@@ -53,16 +42,6 @@
                 "width": 72,
                 "height": 72
             }
-        },
-        "strings/ToString_z6lrx": {
-            "component": "strings/ToString",
-            "metadata": {
-                "label": "ToString",
-                "x": 648,
-                "y": 72,
-                "width": 72,
-                "height": 72
-            }
         }
     },
     "connections": [
@@ -77,16 +56,6 @@
             },
             "metadata": {
                 "route": 0
-            }
-        },
-        {
-            "src": {
-                "process": "angular-demo/testComponent_fwqrq",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "strings/ToString_z6lrx",
-                "port": "in"
             }
         }
     ]
