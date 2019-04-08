@@ -10,7 +10,7 @@
     },
     "inports": {
         "in": {
-          "process": "demoPrimary",
+          "process": "angular-demo/demoPrimary_nf9dy",
           "port": "in",
           "metadata": {
               "x": 216,
@@ -22,7 +22,7 @@
     },
     "outports": {
         "out": {
-          "process": "ToString",
+          "process": "strings/ToString_zvpnt",
           "port": "out",
           "metadata": {
               "x": 648,
