@@ -21,17 +21,17 @@
         }
     },
     "outports": {
-      "out": {
-          "process": "angular-demo/testComponent_fwqrq",
-          "port": "out",
-          "metadata": {
-              "x": 864,
-              "y": 144,
-              "width": 72,
-              "height": 72
-          }
-      }
-  },
+        "out": {
+            "process": "angular-demo/testComponent_fwqrq",
+            "port": "out",
+            "metadata": {
+                "x": 648,
+                "y": 72,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
     "groups": [],
     "processes": {
         "Start": {

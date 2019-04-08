@@ -1,0 +1,91 @@
+{
+    "caseSensitive": false,
+    "properties": {
+        "name": "demo",
+        "description": "demo for multi-graph flow",
+        "icon": "cog",
+        "environment": {
+            "type": "noflo-nodejs"
+        }
+    },
+    "inports": {},
+    "outports": {},
+    "groups": [],
+    "processes": {
+        "angular-demo/demoPrimary_nf9dy": {
+            "component": "angular-demo/demoPrimary",
+            "metadata": {
+                "label": "demoPrimary",
+                "x": 216,
+                "y": 72,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "angular-demo/demoSecondary_315an": {
+            "component": "angular-demo/demoSecondary",
+            "metadata": {
+                "label": "demoSecondary",
+                "x": 648,
+                "y": 0,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "angular-demo/outputCheckComponent_naxqs": {
+            "component": "angular-demo/outputCheckComponent",
+            "metadata": {
+                "label": "outputCheckComponent",
+                "x": 432,
+                "y": 72,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "strings/ToString_zvpnt": {
+            "component": "strings/ToString",
+            "metadata": {
+                "label": "ToString",
+                "x": 648,
+                "y": 144,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "connections": [
+        {
+            "src": {
+                "process": "angular-demo/outputCheckComponent_naxqs",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "angular-demo/demoSecondary_315an",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "angular-demo/outputCheckComponent_naxqs",
+                "port": "error"
+            },
+            "tgt": {
+                "process": "strings/ToString_zvpnt",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "angular-demo/demoPrimary_nf9dy",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "angular-demo/outputCheckComponent_naxqs",
+                "port": "in"
+            },
+            "metadata": {}
+        }
+    ]
+}
