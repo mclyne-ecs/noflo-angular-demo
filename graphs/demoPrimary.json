@@ -1,0 +1,72 @@
+{
+    "caseSensitive": false,
+    "properties": {
+        "name": "demoPrimary",
+        "description": "demo graph",
+        "icon": "cog",
+        "environment": {
+            "type": "noflo-nodejs"
+        }
+    },
+    "inports": {},
+    "outports": {},
+    "groups": [],
+    "processes": {
+        "Start": {
+            "component": "core/Repeat",
+            "metadata": {
+                "label": "Start",
+                "x": 360,
+                "y": 72,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "angular-demo/testComponent_fwqrq": {
+            "component": "angular-demo/testComponent",
+            "metadata": {
+                "label": "testComponent",
+                "x": 504,
+                "y": 72,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "strings/ToString_z6lrx": {
+            "component": "strings/ToString",
+            "metadata": {
+                "label": "ToString",
+                "x": 648,
+                "y": 72,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "connections": [
+        {
+            "src": {
+                "process": "Start",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "angular-demo/testComponent_fwqrq",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "angular-demo/testComponent_fwqrq",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "strings/ToString_z6lrx",
+                "port": "in"
+            },
+            "metadata": {}
+        }
+    ]
+}
