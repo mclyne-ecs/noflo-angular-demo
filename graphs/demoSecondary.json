@@ -10,7 +10,7 @@
     },
     "inports": {
       "in": {
-        "process": "Start",
+        "process": "angular-demo/lengthComponent_pkb3g",
         "port": "in",
         "metadata": {
             "x": -288,
@@ -22,7 +22,7 @@
   },
   "outports": {
       "out": {
-        "process": "strings/ToString",
+        "process": "strings/ToString_5pqdt",
         "port": "out",
         "metadata": {
             "x": 1008,
