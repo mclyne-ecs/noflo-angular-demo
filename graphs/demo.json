@@ -42,7 +42,17 @@
             }
         }
     },
-    "groups": [],
+    "groups": [
+      {
+        "name": "Primary Action",
+        "nodes": [
+          "angular-demo/demoPrimary_nf9dy"
+        ],
+        "metadata": {
+          "description": ""
+        }
+      }
+    ],
     "processes": {
         "angular-demo/demoPrimary_nf9dy": {
             "component": "angular-demo/demoPrimary",
