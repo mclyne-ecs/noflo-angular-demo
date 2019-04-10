@@ -34,7 +34,7 @@ exports.getComponent = () => {
       const secondaryInput = input.getData('stop');
       if (!c.timer) {
         output.send({
-          out: finalOutput + primaryInput + secondaryInput
+          out: secondaryInput
         });
         output.done();
         return;
