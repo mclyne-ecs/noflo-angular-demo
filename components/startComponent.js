@@ -25,7 +25,7 @@ exports.getComponent = () => {
       c.timer = context;
       c.timer.interval = setInterval(() => {
         output.send({
-          out: input
+          out: primaryInput
         });
       }, 100);
     }
