@@ -4,7 +4,7 @@ exports.getComponent = () => {
   const c = new noflo.Component();
   c.inPorts.add('start', { datatype: 'bang'});
   c.inPorts.add('stop', { datatype: 'bang'});
-  c.inPorts.add('out', { datatype: 'bang'});
+  c.outPorts.add('out', { datatype: 'string'});
 
   c.autoOrdering = false;
 
@@ -24,7 +24,7 @@ exports.getComponent = () => {
       c.timer = context;
       c.timer.interval = setInterval(() => {
         output.send({
-          out: true
+          out: 'Data Received'
         });
       }, 100);
     }
