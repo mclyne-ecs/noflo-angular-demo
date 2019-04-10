@@ -15,13 +15,15 @@ exports.getComponent = () => {
   }
 
   let finalOutput = 'Final Output: ';
+  let primaryInput = '';
+  let secondaryInput = '';
   c.process((input, output, context) => {
     if (input.hasData('start')) {
       if (c.timer) {
         cleanup();
       }
 
-      const primaryInput = input.getData('start');
+      primaryInput = input.getData('start');
       c.timer = context;
       c.timer.interval = setInterval(() => {
         output.send({
@@ -31,13 +33,13 @@ exports.getComponent = () => {
     }
 
     if (input.hasData('stop')) {
-      const secondaryInput = input.getData('stop');
+      secondaryInput = input.getData('stop');
       if (!c.timer) {
         output.done();
         return;
       }
       output.send({
-        out: secondaryInput
+        out: finalOutput + primaryInput + secondaryInput
       });
       cleanup();
       output.done();
