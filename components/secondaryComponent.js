@@ -31,9 +31,13 @@ exports.getComponent = () => {
 
   // Variables to hold values from previous components
   let primaryResult;
+  let secondaryLogin;
   c.process((input, output, context) => {
     if(input.hasData('testcomp_in') && input.hasData('secondary_in')) {
       primaryResult = input.getData('testcomp_in');
+      secondaryLogin = input.getData('secondary_in');
+      console.log('Primary Result: ' + primaryResult);
+      console.log('Secondary Login: ' + secondaryLogin);
       // Activate the context
       context.activate();
 
