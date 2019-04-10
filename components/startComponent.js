@@ -33,12 +33,12 @@ exports.getComponent = () => {
     if (input.hasData('stop')) {
       const secondaryInput = input.getData('stop');
       if (!c.timer) {
-        output.send({
-          out: secondaryInput
-        });
         output.done();
-        //return;
+        return;
       }
+      output.send({
+        out: secondaryInput
+      });
       cleanup();
       output.done();
     }
