@@ -33,10 +33,32 @@ exports.getComponent = () => {
   let primaryResult;
   let secondaryLogin;
   c.process((input, output, context) => {
-    if(input.hasData('testcomp_in') && input.hasData('secondary_in')) {
+    if (input.hasData('testcomp_in')) {
       primaryResult = input.getData('testcomp_in');
-      secondaryLogin = input.getData('secondary_in');
       console.log('Primary Result: ' + primaryResult);
+      context.activate();
+      console.log(context);
+    }
+
+    if (input.hasData('secondary_in')) {
+      secondaryLogin = input.getData('secondary_in');
+      console.log('Secondary Login: ' + secondaryLogin);
+
+      if (secondaryLogin === 'yes') {
+        output.send({
+          success: primaryResult
+        });
+      } else {
+        output.send({
+          failure: 'Failure'
+        });
+      }
+      output.done();
+    }
+
+
+    /*if (input.hasData('testcomp_in') && input.hasData('secondary_in')) {
+      secondaryLogin = input.getData('secondary_in');
       console.log('Secondary Login: ' + secondaryLogin);
       // Activate the context
       context.activate();
@@ -51,7 +73,7 @@ exports.getComponent = () => {
         });
       }
       output.done();
-    }
+    }*/
 
     // const secondaryLogin = input.getData('in');
     // console.log('Primary Result: ' + primaryResult);
@@ -68,5 +90,12 @@ exports.getComponent = () => {
     }*/
     // output.done();
   });
+
+  c.tearDown = (callback) => {
+    c.emit('end');
+    c.started = false;
+    callback();
+  }
+
   return c;
 };
