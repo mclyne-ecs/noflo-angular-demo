@@ -31,7 +31,8 @@ exports.getComponent = () => {
 
   // Variables to hold values from previous components
   let primaryResult;
-  c.process((input, output) => {
+  c.process((input, output, context) => {
+    console.log('context: ', context);
     if(input.hasData('testcomp_in')) {
       primaryResult = input.getData('testcomp_in');
     }
