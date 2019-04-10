@@ -32,16 +32,28 @@ exports.getComponent = () => {
   // Variables to hold values from previous components
   let primaryResult;
   c.process((input, output, context) => {
-    console.log('context: ', context);
-    if(input.hasData('testcomp_in')) {
+    if(input.hasData('testcomp_in') && input.hasData('secondary_in')) {
       primaryResult = input.getData('testcomp_in');
+      // Activate the context
+      context.activate();
+
+      if (secondaryLogin === 'yes') {
+        output.send({
+          success: primaryResult
+        });
+      } else {
+        output.send({
+          failure: 'Failure'
+        });
+      }
+      output.done();
     }
 
-    const secondaryLogin = input.getData('in');
-    console.log('Primary Result: ' + primaryResult);
-    console.log('Secondary Login: ' + secondaryLogin);
+    // const secondaryLogin = input.getData('in');
+    // console.log('Primary Result: ' + primaryResult);
+    // console.log('Secondary Login: ' + secondaryLogin);
 
-    if (secondaryLogin === 'yes') {
+    /*if (secondaryLogin === 'yes') {
       output.send({
         success: primaryResult
       });
@@ -49,8 +61,8 @@ exports.getComponent = () => {
       output.send({
         failure: 'Failure'
       });
-    }
-    output.done();
+    }*/
+    // output.done();
   });
   return c;
 };
