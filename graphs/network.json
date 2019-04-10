@@ -12,26 +12,6 @@
     "outports": {},
     "groups": [],
     "processes": {
-        "primaryStart": {
-            "component": "core/Repeat",
-            "metadata": {
-                "label": "primaryStart",
-                "x": 144,
-                "y": 144,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "secondaryStart": {
-            "component": "core/Repeat",
-            "metadata": {
-                "label": "secondaryStart",
-                "x": 144,
-                "y": 288,
-                "width": 72,
-                "height": 72
-            }
-        },
         "strings/ToString_vmxsm": {
             "component": "strings/ToString",
             "metadata": {
@@ -51,6 +31,36 @@
                 "width": 72,
                 "height": 72
             }
+        },
+        "core/Output_lqhgx": {
+            "component": "core/Output",
+            "metadata": {
+                "label": "Output",
+                "x": 576,
+                "y": 216,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "strings/ToString_li30a": {
+            "component": "strings/ToString",
+            "metadata": {
+                "label": "ToString",
+                "x": 144,
+                "y": 144,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "strings/ToString_vwpte": {
+            "component": "strings/ToString",
+            "metadata": {
+                "label": "ToString",
+                "x": 144,
+                "y": 288,
+                "width": 72,
+                "height": 72
+            }
         }
     },
     "connections": [
@@ -67,7 +77,18 @@
         },
         {
             "src": {
-                "process": "primaryStart",
+                "process": "strings/ToString_vmxsm",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/Output_lqhgx",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "strings/ToString_li30a",
                 "port": "out"
             },
             "tgt": {
@@ -78,7 +99,7 @@
         },
         {
             "src": {
-                "process": "secondaryStart",
+                "process": "strings/ToString_vwpte",
                 "port": "out"
             },
             "tgt": {
