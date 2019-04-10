@@ -27,6 +27,8 @@ exports.getComponent = () => {
       { datatype: 'object'}
   );
 
+  c.autoOrdering = false;
+
   // Variables to hold values from previous components
   let primaryResult;
   c.process((input, output) => {
