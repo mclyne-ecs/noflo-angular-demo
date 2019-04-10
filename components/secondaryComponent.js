@@ -37,7 +37,7 @@ exports.getComponent = () => {
       primaryResult = input.getData('testcomp_in');
       console.log('Primary Result: ' + primaryResult);
       context.activate();
-      console.log(context);
+      // console.log(context);
     }
 
     if (input.hasData('secondary_in')) {
