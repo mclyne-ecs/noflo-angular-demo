@@ -37,7 +37,7 @@ exports.getComponent = () => {
           out: secondaryInput
         });
         output.done();
-        return;
+        //return;
       }
       cleanup();
       output.done();
