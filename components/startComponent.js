@@ -14,24 +14,28 @@ exports.getComponent = () => {
     c.timer = null;
   }
 
+  let finalOutput = '';
   c.process((input, output, context) => {
     if (input.hasData('start')) {
       if (c.timer) {
         cleanup();
       }
 
-      input.getData('start');
+      const primaryInput = input.getData('start');
       c.timer = context;
       c.timer.interval = setInterval(() => {
         output.send({
-          out: 'Data Received'
+          out: input
         });
       }, 100);
     }
 
     if (input.hasData('stop')) {
-      input.getData('stop');
+      const secondaryInput = input.getData('stop');
       if (!c.timer) {
+        output.send({
+          out: finalOutput + primaryInput + secondaryInput
+        });
         output.done();
         return;
       }
