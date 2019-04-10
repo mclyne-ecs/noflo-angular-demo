@@ -2,8 +2,8 @@ const noflo = require('noflo');
 
 exports.getComponent = () => {
   const c = new noflo.Component();
-  c.inPorts.add('start', { datatype: 'bang'});
-  c.inPorts.add('stop', { datatype: 'bang'});
+  c.inPorts.add('start', { datatype: 'string'});
+  c.inPorts.add('stop', { datatype: 'string'});
   c.outPorts.add('out', { datatype: 'string'});
 
   c.autoOrdering = false;
@@ -14,7 +14,7 @@ exports.getComponent = () => {
     c.timer = null;
   }
 
-  let finalOutput = '';
+  let finalOutput = 'Final Output: ';
   c.process((input, output, context) => {
     if (input.hasData('start')) {
       if (c.timer) {
