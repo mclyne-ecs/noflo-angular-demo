@@ -8,7 +8,7 @@ exports.getComponent = () => {
 
   c.inPorts.add(
     'secondary_in',
-    { datatype: 'boolean'}
+    { datatype: 'string'}
   );
   c.inPorts.add(
     'testcomp_in',
@@ -27,20 +27,20 @@ exports.getComponent = () => {
       { datatype: 'object'}
   );
 
+  // Variables to hold values from previous components
+  let primaryResult;
   c.process((input, output) => {
-    // If there is no data from the primary login, then return
-    if(!input.hasData('in', 'testcomp_in')) {
-      return;
+    if(input.hasData('testcomp_in')) {
+      primaryResult = input.getData('testcomp_in');
     }
 
     const secondaryLogin = input.getData('in');
-    const testComponentValue = input.getData('testcomp_in');
+    console.log('Primary Result: ' + primaryResult);
     console.log('Secondary Login: ' + secondaryLogin);
-    console.log('Test component Value: ' + testComponentValue);
 
     if (secondaryLogin === 'yes') {
       output.send({
-        success: testComponentValue
+        success: primaryResult
       });
     } else {
       output.send({
