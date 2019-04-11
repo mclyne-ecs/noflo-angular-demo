@@ -35,6 +35,7 @@ exports.getComponent = () => {
 
     // This is a boolean to decide if we need second factor or not, or some other process
     const serviceOutResult = input.getData('service_in');
+    console.log('serviceOutResult: ', serviceOutResult);
     const testComponentValue = input.getData('in');
     if (serviceOutResult) {
       output.send({
