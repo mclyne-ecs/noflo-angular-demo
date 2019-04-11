@@ -10,8 +10,16 @@ exports.getComponent = () => {
     'in',
     { datatype: 'all'}
   );
+  c.inPorts.add(
+    'service_in',
+    { datatype: 'all'}
+  );
   c.outPorts.add(
     'out',
+    { datatype: 'int'}
+  );
+  c.outPorts.add(
+    'sec_fac_true_out',
     { datatype: 'int'}
   );
   c.outPorts.add(
@@ -21,18 +29,20 @@ exports.getComponent = () => {
 
   c.process((input, output) => {
     // If there is no data then return
-    if(!input.hasData('in')) {
+    if(!input.hasData('in') && !input.hasData('service_in')) {
       return
     }
 
-    const inputString = input.getData('in');
-    if (inputString.length > 2) {
+    // This is a boolean to decide if we need second factor or not, or some other process
+    const serviceOutResult = input.getData('service_in');
+    const testComponentValue = input.getData('in');
+    if (serviceOutResult) {
       output.send({
-        out: inputString.length
+        sec_fac_true_out: testComponentValue
       });
     } else {
       output.send({
-        error: 'String length is less than 2. Please enter a string with length greater than 2'
+        out: testComponentValue
       });
     }
     output.done();
