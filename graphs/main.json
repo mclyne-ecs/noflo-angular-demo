@@ -11,7 +11,7 @@
             "process": "Start",
             "port": "in",
             "metadata": {
-                "x": -288,
+                "x": -360,
                 "y": 432,
                 "width": 72,
                 "height": 72
@@ -21,7 +21,7 @@
             "process": "angular-demo/secondaryComponent_shbls",
             "port": "secondary_in",
             "metadata": {
-                "x": -288,
+                "x": -360,
                 "y": 288,
                 "width": 72,
                 "height": 72
@@ -46,7 +46,7 @@
             "component": "angular-demo/testComponent",
             "metadata": {
                 "label": "testComponent",
-                "x": 0,
+                "x": -72,
                 "y": 432,
                 "width": 72,
                 "height": 72
@@ -56,7 +56,7 @@
             "component": "angular-demo/lengthComponent",
             "metadata": {
                 "label": "lengthComponent",
-                "x": 432,
+                "x": 504,
                 "y": 432,
                 "width": 72,
                 "height": 72
@@ -66,7 +66,7 @@
             "component": "core/Repeat",
             "metadata": {
                 "label": "Start",
-                "x": -144,
+                "x": -216,
                 "y": 432,
                 "width": 72,
                 "height": 72
@@ -107,7 +107,7 @@
             "metadata": {
                 "label": "ToString",
                 "x": 864,
-                "y": 468,
+                "y": 360,
                 "width": 72,
                 "height": 72
             }
@@ -116,7 +116,7 @@
             "component": "angular-demo/processComponent",
             "metadata": {
                 "label": "processComponent",
-                "x": 144,
+                "x": 72,
                 "y": 432,
                 "width": 72,
                 "height": 72
@@ -126,8 +126,18 @@
             "component": "angular-demo/secondaryComponent",
             "metadata": {
                 "label": "secondaryComponent",
-                "x": 288,
+                "x": 360,
                 "y": 288,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "angular-demo/outputCheckComponent_5icae": {
+            "component": "angular-demo/outputCheckComponent",
+            "metadata": {
+                "label": "outputCheckComponent",
+                "x": 216,
+                "y": 432,
                 "width": 72,
                 "height": 72
             }
@@ -228,19 +238,6 @@
         },
         {
             "src": {
-                "process": "angular-demo/processComponent_wj807",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "angular-demo/secondaryComponent_shbls",
-                "port": "testcomp_in"
-            },
-            "metadata": {
-                "route": 7
-            }
-        },
-        {
-            "src": {
                 "process": "angular-demo/secondaryComponent_shbls",
                 "port": "success"
             },
@@ -263,6 +260,66 @@
             },
             "metadata": {
                 "route": 1
+            }
+        },
+        {
+            "src": {
+                "process": "angular-demo/processComponent_wj807",
+                "port": "service_out"
+            },
+            "tgt": {
+                "process": "angular-demo/outputCheckComponent_5icae",
+                "port": "service_in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "angular-demo/processComponent_wj807",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "angular-demo/outputCheckComponent_5icae",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "angular-demo/outputCheckComponent_5icae",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "angular-demo/lengthComponent_y8qm2",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "angular-demo/outputCheckComponent_5icae",
+                "port": "sec_fac_true_out"
+            },
+            "tgt": {
+                "process": "angular-demo/secondaryComponent_shbls",
+                "port": "testcomp_in"
+            },
+            "metadata": {
+                "route": 7
+            }
+        },
+        {
+            "data": "testing",
+            "tgt": {
+                "process": "Start",
+                "port": "in"
+            }
+        },
+        {
+            "data": "no",
+            "tgt": {
+                "process": "angular-demo/secondaryComponent_shbls",
+                "port": "secondary_in"
             }
         }
     ]
