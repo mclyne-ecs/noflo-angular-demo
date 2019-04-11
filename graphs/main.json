@@ -307,20 +307,6 @@
             "metadata": {
                 "route": 7
             }
-        },
-        {
-            "data": "testing",
-            "tgt": {
-                "process": "Start",
-                "port": "in"
-            }
-        },
-        {
-            "data": "no",
-            "tgt": {
-                "process": "angular-demo/secondaryComponent_shbls",
-                "port": "secondary_in"
-            }
         }
     ]
 }
