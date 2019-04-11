@@ -11,7 +11,11 @@ exports.getComponent = () => {
     { datatype: 'all'}
   );
   c.outPorts.add(
-    'out',
+    'second_factor_out',
+    { datatype: 'int'}
+  );
+  c.outPorts.add(
+    'primary_factor_out',
     { datatype: 'int'}
   );
   c.outPorts.add(
@@ -30,7 +34,8 @@ exports.getComponent = () => {
     setTimeout(() => {
       console.log('Calling some service');
       output.send({
-        out: testComponentOutput
+        primary_factor_out: testComponentOutput,
+        second_factor_out: testComponentOutput
       });
       output.done();
     }, 3000);
