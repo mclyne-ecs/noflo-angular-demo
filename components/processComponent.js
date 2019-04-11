@@ -15,6 +15,10 @@ exports.getComponent = () => {
     { datatype: 'int'}
   );
   c.outPorts.add(
+    'service_out',
+    { datatype: 'boolean'}
+  );
+  c.outPorts.add(
       'error',
       { datatype: 'object'}
   );
@@ -28,9 +32,17 @@ exports.getComponent = () => {
     const testComponentOutput = input.getData('in');
     setTimeout(() => {
       console.log('Calling some service');
-      output.send({
-        out: testComponentOutput
-      });
+      if (testComponentOutput > 2) {
+        output.send({
+          out: testComponentOutput,
+          service_out: true
+        });
+      } else {
+        output.send({
+          out: testComponentOutput,
+          service_out: false
+        });
+      }
       output.done();
     }, 3000);
   });
