@@ -275,17 +275,6 @@
         },
         {
             "src": {
-                "process": "angular-demo/processComponent_wj807",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "angular-demo/outputCheckComponent_5icae",
-                "port": "in"
-            },
-            "metadata": {}
-        },
-        {
-            "src": {
                 "process": "angular-demo/outputCheckComponent_5icae",
                 "port": "out"
             },
@@ -306,6 +295,13 @@
             },
             "metadata": {
                 "route": 7
+            }
+        },
+        {
+            "data": "test",
+            "tgt": {
+                "process": "Start",
+                "port": "in"
             }
         }
     ]
