@@ -7,12 +7,8 @@ exports.getComponent = () => {
   c.icon = 'cog';
 
   c.inPorts.add(
-    'in',
-    { datatype: 'all'}
-  );
-  c.inPorts.add(
     'service_in',
-    { datatype: 'all'}
+    { datatype: 'object'}
   );
   c.outPorts.add(
     'out',
@@ -28,15 +24,25 @@ exports.getComponent = () => {
   );
 
   c.process((input, output) => {
-    // If there is no data then return
-    if(!input.hasData('in') && !input.hasData('service_in')) {
-      return
+    console.log(input.hasData('in'));
+    console.log(input.hasData('service_in'));
+
+    if (input.hasData('in')) {
+      context.activate();
+    }
+
+    if (input.hasData('service_in')) {
+      const serviceOutResult = input.getData('service_in');
+      console.log('serviceOutResult: ', serviceOutResult);
+      const testComponentValue = input.getData('in');
+      console.log('testComponentValue: ', testComponentValue);
     }
 
     // This is a boolean to decide if we need second factor or not, or some other process
-    const serviceOutResult = input.getData('service_in');
+    /*const serviceOutResult = input.getData('service_in');
     console.log('serviceOutResult: ', serviceOutResult);
     const testComponentValue = input.getData('in');
+    console.log('testComponentValue: ', testComponentValue);
     if (serviceOutResult) {
       output.send({
         sec_fac_true_out: testComponentValue
@@ -46,7 +52,7 @@ exports.getComponent = () => {
         out: testComponentValue
       });
     }
-    output.done();
+    output.done();*/
   });
   return c;
 };

@@ -11,12 +11,8 @@ exports.getComponent = () => {
     { datatype: 'all'}
   );
   c.outPorts.add(
-    'out',
-    { datatype: 'int'}
-  );
-  c.outPorts.add(
     'service_out',
-    { datatype: 'boolean'}
+    { datatype: 'object'}
   );
   c.outPorts.add(
       'error',
@@ -33,18 +29,24 @@ exports.getComponent = () => {
     setTimeout(() => {
       console.log('Calling some service');
       if (testComponentOutput > 2) {
+        console.log('string is greater than two');
         output.send({
-          out: testComponentOutput,
-          service_out: true
+          service_out: {
+            inputLength: testComponentOutput,
+            hasSecondFac: true
+          }
         });
       } else {
+        console.log('string is less than two');
         output.send({
-          out: testComponentOutput,
-          service_out: false
+          service_out: {
+            inputLength: testComponentOutput,
+            hasSecondFac: false
+          }
         });
       }
       output.done();
-    }, 3000);
+    }, 2000);
   });
   return c;
 };
