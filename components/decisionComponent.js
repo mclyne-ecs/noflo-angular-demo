@@ -29,15 +29,15 @@ exports.getComponent = () => {
       return
     }
 
-    const input = input.getData('in');
-    if (input.loginComplete) {
-      if (input.hasSecondFac) {
+    const serviceResult = input.getData('in');
+    if (serviceResult.loginComplete) {
+      if (serviceResult.hasSecondFac) {
         output.send({
-          second_fac: input.message
+          second_fac: serviceResult.message
         });
       } else {
         output.send({
-          out: input.message
+          out: serviceResult.message
         });
       }
     }

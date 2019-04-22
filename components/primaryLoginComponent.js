@@ -25,11 +25,11 @@ exports.getComponent = () => {
       return
     }
 
-    const input = input.getData('in');
-    console.log(input.username);
-    console.log(input.password);
+    const loginData = input.getData('in');
+    console.log(loginData.username);
+    console.log(loginData.password);
     output.send({
-      out: input
+      out: loginData
     });
     output.done();
   });

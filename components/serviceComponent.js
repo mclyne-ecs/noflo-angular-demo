@@ -11,7 +11,7 @@ exports.getComponent = () => {
     { datatype: 'object'}
   );
   c.outPorts.add(
-    'service_out',
+    'out',
     { datatype: 'object'}
   );
   c.outPorts.add(
@@ -25,21 +25,21 @@ exports.getComponent = () => {
       return
     }
 
-    const input = input.getData('in');
+    const loginData = input.getData('in');
 
     setTimeout(() => {
       console.log('Calling some service');
-      if (input.username === 'good') {
+      if (loginData.username === 'good') {
         output.send({
-          service_out: {
+          out: {
             loginComplete: true,
             message: 'Primay Login Success',
             hasSecondFac: false
           }
         });
-      } else if (input.username === 'best') {
+      } else if (loginData.username === 'best') {
         output.send({
-          service_out: {
+          out: {
             loginComplete: true,
             message: 'Awaiting Second Factor',
             hasSecondFac: true
@@ -47,7 +47,7 @@ exports.getComponent = () => {
         });
       } else {
         output.send({
-          service_out: {
+          out: {
             loginComplete: false,
             message: 'Primary Login Failure',
             hasSecondFac: false
