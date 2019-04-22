@@ -2,27 +2,60 @@ const noflo = require('noflo');
 
 exports.getComponent = () => {
   const c = new noflo.Component();
-  c.description = 'Service layer';
+
+  c.description = 'Secondary login';
   c.icon = 'cog';
-  c.inPorts.add('in', {
-    datatype: 'all',
-    description: 'Packet to forward'
-  });
-  c.outPorts.add('out', {
-    datatype: 'all'
-  });
+
+  c.inPorts.add(
+    'in',
+    { datatype: 'object'}
+  );
+  c.outPorts.add(
+    'service_out',
+    { datatype: 'object'}
+  );
+  c.outPorts.add(
+      'error',
+      { datatype: 'object'}
+  );
+
   c.process((input, output) => {
-    // Check preconditions on input data
-    if (!input.hasData('in')) {
-      return;
+    // If there is no data then return
+    if(!input.hasData('in')) {
+      return
     }
-    // Read packets we need to process
-    const data = input.getData('in');
-    // Process data and send output
-    output.send({
-      out: data
-    });
-    // Deactivate
+
+    const input = input.getData('in');
+
+    setTimeout(() => {
+      console.log('Calling some service');
+      if (input.username === 'good') {
+        output.send({
+          service_out: {
+            loginComplete: true,
+            message: 'Primay Login Success',
+            hasSecondFac: false
+          }
+        });
+      } else if (input.username === 'best') {
+        output.send({
+          service_out: {
+            loginComplete: true,
+            message: 'Awaiting Second Factor',
+            hasSecondFac: true
+          }
+        });
+      } else {
+        output.send({
+          service_out: {
+            loginComplete: false,
+            message: 'Primary Login Failure',
+            hasSecondFac: false
+          }
+        });
+      }
+      output.done();
+    }, 2000);
     output.done();
   });
   return c;

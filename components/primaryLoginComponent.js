@@ -26,10 +26,10 @@ exports.getComponent = () => {
     }
 
     const input = input.getData('in');
-    // console.log(input.username);
-    // console.log(input.password);
+    console.log(input.username);
+    console.log(input.password);
     output.send({
-      out: 'done'
+      out: input
     });
     output.done();
   });
