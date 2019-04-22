@@ -2,7 +2,7 @@ const noflo = require('noflo');
 
 exports.getComponent = () => {
   const c = new noflo.Component();
-  c.description = 'Some decision';
+  c.description = 'some decision';
   c.icon = 'cog';
   c.inPorts.add('in', {
     datatype: 'all',

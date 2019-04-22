@@ -25,7 +25,7 @@
             "metadata": {
                 "label": "primaryLoginComponent",
                 "x": 576,
-                "y": 144,
+                "y": 180,
                 "width": 72,
                 "height": 72
             }
@@ -34,7 +34,7 @@
             "component": "angular-demo/secondaryLoginComponent",
             "metadata": {
                 "label": "secondaryLoginComponent",
-                "x": 1008,
+                "x": 1152,
                 "y": 0,
                 "width": 72,
                 "height": 72
@@ -54,7 +54,17 @@
             "component": "angular-demo/detailsComponent",
             "metadata": {
                 "label": "detailsComponent",
-                "x": 1224,
+                "x": 1296,
+                "y": 144,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "angular-demo/decisionComponent_ao44k": {
+            "component": "angular-demo/decisionComponent",
+            "metadata": {
+                "label": "decisionComponent",
+                "x": 1008,
                 "y": 144,
                 "width": 72,
                 "height": 72
@@ -75,22 +85,35 @@
         },
         {
             "src": {
-                "process": "angular-demo/serviceComponent_sf46w",
+                "process": "angular-demo/secondaryLoginComponent_4mmxo",
                 "port": "out"
             },
             "tgt": {
-                "process": "angular-demo/secondaryLoginComponent_4mmxo",
+                "process": "angular-demo/detailsComponent_sqg8x",
                 "port": "in"
             },
             "metadata": {}
         },
         {
             "src": {
-                "process": "angular-demo/secondaryLoginComponent_4mmxo",
+                "process": "angular-demo/serviceComponent_sf46w",
                 "port": "out"
             },
             "tgt": {
-                "process": "angular-demo/detailsComponent_sqg8x",
+                "process": "angular-demo/decisionComponent_ao44k",
+                "port": "in"
+            },
+            "metadata": {
+                "route": null
+            }
+        },
+        {
+            "src": {
+                "process": "angular-demo/decisionComponent_ao44k",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "angular-demo/secondaryLoginComponent_4mmxo",
                 "port": "in"
             },
             "metadata": {}
