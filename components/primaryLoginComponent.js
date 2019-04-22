@@ -3,7 +3,7 @@ const noflo = require('noflo');
 exports.getComponent = () => {
   const c = new noflo.Component();
 
-  c.description = 'primary login';
+  c.description = 'Primary login';
   c.icon = 'cog';
 
   c.inPorts.add(

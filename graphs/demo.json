@@ -8,88 +8,54 @@
             "type": "noflo-nodejs"
         }
     },
-    "inports": {
-        "in": {
-            "process": "angular-demo/demoPrimary_nf9dy",
-            "port": "in",
-            "metadata": {
-                "x": 72,
-                "y": 72,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "secondaryin": {
-            "process": "angular-demo/demoSecondary_315an",
-            "port": "in",
-            "metadata": {
-                "x": 72,
-                "y": -72,
-                "width": 72,
-                "height": 72
-            }
-        }
-    },
-    "outports": {
-        "out": {
-            "process": "strings/ToString_zvpnt",
-            "port": "out",
-            "metadata": {
-                "x": 1008,
-                "y": 72,
-                "width": 72,
-                "height": 72
-            }
-        }
-    },
+    "inports": {},
+    "outports": {},
     "groups": [
-      {
-        "name": "Primary Action",
-        "nodes": [
-          "angular-demo/demoPrimary_nf9dy"
-        ],
-        "metadata": {
-          "description": ""
+        {
+            "name": "Primary Action",
+            "nodes": [],
+            "metadata": {
+                "description": ""
+            }
         }
-      }
     ],
     "processes": {
-        "angular-demo/demoPrimary_nf9dy": {
-            "component": "angular-demo/demoPrimary",
+        "angular-demo/primaryLoginComponent_up1pl": {
+            "component": "angular-demo/primaryLoginComponent",
             "metadata": {
-                "label": "demoPrimary",
-                "x": 216,
-                "y": 72,
+                "label": "primaryLoginComponent",
+                "x": 576,
+                "y": 144,
                 "width": 72,
                 "height": 72
             }
         },
-        "angular-demo/demoSecondary_315an": {
-            "component": "angular-demo/demoSecondary",
+        "angular-demo/secondaryLoginComponent_4mmxo": {
+            "component": "angular-demo/secondaryLoginComponent",
             "metadata": {
-                "label": "demoSecondary",
-                "x": 648,
-                "y": -72,
+                "label": "secondaryLoginComponent",
+                "x": 1008,
+                "y": 0,
                 "width": 72,
                 "height": 72
             }
         },
-        "angular-demo/outputCheckComponent_naxqs": {
-            "component": "angular-demo/outputCheckComponent",
+        "angular-demo/serviceComponent_sf46w": {
+            "component": "angular-demo/serviceComponent",
             "metadata": {
-                "label": "outputCheckComponent",
-                "x": 432,
-                "y": 72,
+                "label": "serviceComponent",
+                "x": 792,
+                "y": 144,
                 "width": 72,
                 "height": 72
             }
         },
-        "strings/ToString_zvpnt": {
-            "component": "strings/ToString",
+        "angular-demo/detailsComponent_sqg8x": {
+            "component": "angular-demo/detailsComponent",
             "metadata": {
-                "label": "ToString",
-                "x": 864,
-                "y": 72,
+                "label": "detailsComponent",
+                "x": 1224,
+                "y": 144,
                 "width": 72,
                 "height": 72
             }
@@ -98,43 +64,36 @@
     "connections": [
         {
             "src": {
-                "process": "angular-demo/outputCheckComponent_naxqs",
+                "process": "angular-demo/primaryLoginComponent_up1pl",
                 "port": "out"
             },
             "tgt": {
-                "process": "angular-demo/demoSecondary_315an",
+                "process": "angular-demo/serviceComponent_sf46w",
                 "port": "in"
-            }
-        },
-        {
-            "src": {
-                "process": "angular-demo/outputCheckComponent_naxqs",
-                "port": "error"
             },
-            "tgt": {
-                "process": "strings/ToString_zvpnt",
-                "port": "in"
-            }
+            "metadata": {}
         },
         {
             "src": {
-                "process": "angular-demo/demoPrimary_nf9dy",
+                "process": "angular-demo/serviceComponent_sf46w",
                 "port": "out"
             },
             "tgt": {
-                "process": "angular-demo/outputCheckComponent_naxqs",
+                "process": "angular-demo/secondaryLoginComponent_4mmxo",
                 "port": "in"
-            }
+            },
+            "metadata": {}
         },
         {
             "src": {
-                "process": "angular-demo/demoSecondary_315an",
+                "process": "angular-demo/secondaryLoginComponent_4mmxo",
                 "port": "out"
             },
             "tgt": {
-                "process": "strings/ToString_zvpnt",
+                "process": "angular-demo/detailsComponent_sqg8x",
                 "port": "in"
-            }
+            },
+            "metadata": {}
         }
     ]
 }
