@@ -9,39 +9,39 @@
         }
     },
     "inports": {
-      "in": {
-          "process": "angular-demo/primaryLoginComponent_up1pl",
-          "port": "in",
-          "metadata": {
-              "x": -432,
-              "y": 432,
-              "width": 72,
-              "height": 72
-          }
-      },
-      "secondary_in": {
-          "process": "angular-demo/secondaryLoginComponent_4mmxo",
-          "port": "secondary_in",
-          "metadata": {
-              "x": -432,
-              "y": 288,
-              "width": 72,
-              "height": 72
-          }
-      }
-  },
-  "outports": {
-      "pageoutput": {
-          "process": "angular-demo/detailsComponent_sqg8x",
-          "port": "out",
-          "metadata": {
-              "x": 1008,
-              "y": 432,
-              "width": 72,
-              "height": 72
-          }
-      }
-  },
+        "in": {
+            "process": "angular-demo/primaryLoginComponent_up1pl",
+            "port": "in",
+            "metadata": {
+                "x": 432,
+                "y": 144,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "secondary_in": {
+            "process": "angular-demo/secondaryLoginComponent_4mmxo",
+            "port": "secondary_in",
+            "metadata": {
+                "x": -360,
+                "y": 288,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "outports": {
+        "pageoutput": {
+            "process": "angular-demo/detailsComponent_sqg8x",
+            "port": "out",
+            "metadata": {
+                "x": 1440,
+                "y": 144,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
     "groups": [
         {
             "name": "Primary Action",
@@ -57,7 +57,7 @@
             "metadata": {
                 "label": "primaryLoginComponent",
                 "x": 576,
-                "y": 180,
+                "y": 144,
                 "width": 72,
                 "height": 72
             }
@@ -112,8 +112,7 @@
             "tgt": {
                 "process": "angular-demo/serviceComponent_sf46w",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -123,8 +122,7 @@
             "tgt": {
                 "process": "angular-demo/detailsComponent_sqg8x",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -147,8 +145,7 @@
             "tgt": {
                 "process": "angular-demo/secondaryLoginComponent_4mmxo",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         }
     ]
 }
