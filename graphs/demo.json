@@ -136,6 +136,28 @@
                 "port": "decision_in"
             },
             "metadata": {}
+        },
+        {
+            "src": {
+                "process": "angular-demo/secondaryLoginComponent_yclh2",
+                "port": "success"
+            },
+            "tgt": {
+                "process": "angular-demo/detailsComponent_sqg8x",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "angular-demo/secondaryLoginComponent_yclh2",
+                "port": "failure"
+            },
+            "tgt": {
+                "process": "angular-demo/detailsComponent_sqg8x",
+                "port": "in"
+            },
+            "metadata": {}
         }
     ]
 }
