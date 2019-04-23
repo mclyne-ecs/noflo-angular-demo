@@ -2,27 +2,30 @@ const noflo = require('noflo');
 
 exports.getComponent = () => {
   const c = new noflo.Component();
-  c.description = 'Login details';
+
+  c.description = 'Detials';
   c.icon = 'cog';
-  c.inPorts.add('in', {
-    datatype: 'all',
-    description: 'Packet to forward'
-  });
-  c.outPorts.add('out', {
-    datatype: 'all'
-  });
+
+  c.inPorts.add(
+    'in',
+    { datatype: 'object'}
+  );
+  c.outPorts.add(
+    'out',
+    { datatype: 'object'}
+  );
+);
+
   c.process((input, output) => {
-    // Check preconditions on input data
-    if (!input.hasData('in')) {
-      return;
+    // If there is no data then return
+    if(!input.hasData('in')) {
+      return
     }
-    // Read packets we need to process
-    const data = input.getData('in');
-    // Process data and send output
+
+    const details = input.getData('in');
     output.send({
-      out: data
+      out: details
     });
-    // Deactivate
     output.done();
   });
   return c;

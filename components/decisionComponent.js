@@ -12,11 +12,11 @@ exports.getComponent = () => {
   );
   c.outPorts.add(
     'out',
-    { datatype: 'object'}
+    { datatype: 'string'}
   );
   c.outPorts.add(
     'second_fac',
-    { datatype: 'object'}
+    { datatype: 'string'}
   );
   c.outPorts.add(
     'error',

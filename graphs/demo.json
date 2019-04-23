@@ -18,7 +18,17 @@
                 "width": 72,
                 "height": 72
             }
-        }
+        },
+        "secondary_in": {
+          "process": "angular-demo/secondaryLoginComponent_yclh2",
+          "port": "secondary_in",
+          "metadata": {
+              "x": 432,
+              "y": 0,
+              "width": 72,
+              "height": 72
+          }
+      }
     },
     "outports": {
         "pageoutput": {
