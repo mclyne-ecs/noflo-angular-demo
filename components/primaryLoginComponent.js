@@ -26,8 +26,7 @@ exports.getComponent = () => {
     }
 
     const loginData = input.getData('in');
-    console.log(loginData.username);
-    console.log(loginData.password);
+    console.log('loginData from primary login: ', loginData);
     output.send({
       out: loginData
     });

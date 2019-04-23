@@ -26,10 +26,11 @@ exports.getComponent = () => {
     }
 
     const loginData = input.getData('in');
+    console.log('loginData from service: ', loginData);
 
     setTimeout(() => {
       console.log('Calling some service');
-      if (loginData.username === 'good') {
+      if (loginData === 'good') {
         output.send({
           out: {
             loginComplete: true,
@@ -37,7 +38,7 @@ exports.getComponent = () => {
             hasSecondFac: false
           }
         });
-      } else if (loginData.username === 'best') {
+      } else if (loginData === 'best') {
         output.send({
           out: {
             loginComplete: true,
