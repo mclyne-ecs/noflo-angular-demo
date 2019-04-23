@@ -18,16 +18,6 @@
                 "width": 72,
                 "height": 72
             }
-        },
-        "secondary_in": {
-            "process": "angular-demo/secondaryLoginComponent_4mmxo",
-            "port": "secondary_in",
-            "metadata": {
-                "x": 432,
-                "y": 0,
-                "width": 72,
-                "height": 72
-            }
         }
     },
     "outports": {
@@ -62,16 +52,6 @@
                 "height": 72
             }
         },
-        "angular-demo/secondaryLoginComponent_4mmxo": {
-            "component": "angular-demo/secondaryLoginComponent",
-            "metadata": {
-                "label": "secondaryLoginComponent",
-                "x": 1152,
-                "y": 0,
-                "width": 72,
-                "height": 72
-            }
-        },
         "angular-demo/serviceComponent_sf46w": {
             "component": "angular-demo/serviceComponent",
             "metadata": {
@@ -92,12 +72,22 @@
                 "height": 72
             }
         },
-        "angular-demo/decisionComponent_ao44k": {
+        "angular-demo/decisionComponent_pz9vr": {
             "component": "angular-demo/decisionComponent",
             "metadata": {
                 "label": "decisionComponent",
                 "x": 1008,
                 "y": 144,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "angular-demo/secondaryLoginComponent_yclh2": {
+            "component": "angular-demo/secondaryLoginComponent",
+            "metadata": {
+                "label": "secondaryLoginComponent",
+                "x": 1152,
+                "y": 0,
                 "width": 72,
                 "height": 72
             }
@@ -116,36 +106,36 @@
         },
         {
             "src": {
-                "process": "angular-demo/secondaryLoginComponent_4mmxo",
+                "process": "angular-demo/serviceComponent_sf46w",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "angular-demo/decisionComponent_pz9vr",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "angular-demo/decisionComponent_pz9vr",
                 "port": "out"
             },
             "tgt": {
                 "process": "angular-demo/detailsComponent_sqg8x",
                 "port": "in"
-            }
+            },
+            "metadata": {}
         },
         {
             "src": {
-                "process": "angular-demo/serviceComponent_sf46w",
-                "port": "out"
+                "process": "angular-demo/decisionComponent_pz9vr",
+                "port": "second_fac"
             },
             "tgt": {
-                "process": "angular-demo/decisionComponent_ao44k",
-                "port": "in"
+                "process": "angular-demo/secondaryLoginComponent_yclh2",
+                "port": "decision_in"
             },
-            "metadata": {
-                "route": null
-            }
-        },
-        {
-            "src": {
-                "process": "angular-demo/decisionComponent_ao44k",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "angular-demo/secondaryLoginComponent_4mmxo",
-                "port": "in"
-            }
+            "metadata": {}
         }
     ]
 }
